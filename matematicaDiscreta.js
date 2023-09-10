@@ -15,14 +15,14 @@ function gcd(a, b) {
     const parteInteira = partes[0];
     const parteDecimal = partes[1];
     
-    // Remova os parênteses que indicam repetição periódica (se existirem)
+    // Função que remove parenteses caso Exista, na repetição Periodica
     const parteDecimalLimpa = parteDecimal.replace(/\(/g, '').replace(/\)/g, '');
     
-    // Calcule o numerador e o denominador da fração
+    // Realizar o Calculo de Numerador e Denominador da Fração
     const numerador = parseInt(parteInteira + parteDecimalLimpa);
     const denominador = Math.pow(10, parteDecimalLimpa.length) - 1;
     
-    // Encontre o MDC entre o numerador e o denominador e reduza a fração
+    // Encontrar o MDC para poder reduzir a Fração;
     const mdc = gcd(numerador, denominador);
     const numeradorSimplificado = numerador / mdc;
     const denominadorSimplificado = denominador / mdc;
